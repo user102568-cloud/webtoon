@@ -1,0 +1,34 @@
+body {
+    /* กำหนดพื้นหลังและไม่มีขอบ */
+    background-color: #f0f0f0; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางหน้าจอ */
+}
+
+.webtoon-container {
+    /* กำหนดความกว้างสูงสุดเพื่อให้เหมาะกับการอ่านบนมือถือ */
+    width: 100%;
+    max-width: 600px; /* ความกว้างมาตรฐานที่เหมาะกับสมาร์ทโฟน */
+    display: flex;
+    flex-direction: column; /* จัดเรียงองค์ประกอบทั้งหมดในแนวตั้ง */
+    align-items: center;
+    background-color: white; /* พื้นหลังของเนื้อหา */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อย */
+}
+
+.webtoon-container img {
+    /* กำหนดให้รูปภาพมีความกว้างเต็มคอนเทนเนอร์ */
+    width: 100%;
+    height: auto; /* รักษาอัตราส่วนของภาพ */
+    display: block;
+    margin-bottom: 5px; /* เว้นช่องว่างระหว่างภาพเล็กน้อย */
+}
+
+/* คลาสสำหรับเว้นช่องว่างขนาดใหญ่เพื่อสร้าง Pacing */
+.spacer-big {
+    width: 100%;
+    height: 150px; /* กำหนดความสูงของช่องว่าง */
+    background-color: #ffffff; /* สีพื้นหลังของช่องว่าง */
+}
