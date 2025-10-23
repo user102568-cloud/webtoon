@@ -9,18 +9,49 @@
 <body>
     
     <div class="webtoon-container">
-        <img src="5807_0.jpg" alt="Webtoon Panel 1">
+        <img src="5807_0.jpg" alt="Webtoon Panel 1" class="fade-in">
 
-        <img src="5808_0.jpg" alt="Webtoon Panel 2">
+        <img src="5808_0.jpg" alt="Webtoon Panel 2" class="fade-in">
         
         <div class="spacer-big"></div> 
-        <img src="5809_0.jpg" alt="Webtoon Panel 3">
+        <img src="5809_0.jpg" alt="Webtoon Panel 3" class="fade-in">
         <div class="spacer-big"></div>
 
-        <img src="5810_0.jpg" alt="Webtoon Panel 4">
-        <img src="5811_0.jpg" alt="Webtoon Panel 5">
+        <img src="5810_0.jpg" alt="Webtoon Panel 4" class="fade-in">
+        <img src="5811_0.jpg" alt="Webtoon Panel 5" class="fade-in">
 
     </div>
 
 </body>
+
 </html>
+
+
+
+<!-- CSS -->
+<style>
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<!-- JavaScript -->
+<script>
+const fadeEls = document.querySelectorAll('.fade-in');
+function checkFade() {
+  fadeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', checkFade);
+checkFade();
+</script>
